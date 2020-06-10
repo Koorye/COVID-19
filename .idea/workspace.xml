@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="03ea1441-eb8f-4127-b7c2-cff43b92411e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv" afterDir="false" />
-    </list>
+    <list default="true" id="03ea1441-eb8f-4127-b7c2-cff43b92411e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +76,7 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-1544" />
+              <first_editor />
               <second_editor />
             </state>
           </provider>
@@ -88,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/get_international_timeline.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-59">
-              <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+              <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
               <folding>
                 <element signature="e#195#214#0" expanded="true" />
                 <marker date="1591819208323" expanded="true" signature="269:270" ph="..." />
@@ -362,7 +360,7 @@
     <entry file="file://$PROJECT_DIR$/get_international_timeline.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-59">
-          <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+          <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
           <folding>
             <element signature="e#195#214#0" expanded="true" />
             <marker date="1591819208323" expanded="true" signature="269:270" ph="..." />
@@ -401,7 +399,7 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-1544" />
+          <first_editor />
           <second_editor />
         </state>
       </provider>
