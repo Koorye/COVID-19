@@ -20,11 +20,11 @@
 
 作出以下定义：
 
-- 定义小拐点(tiny inflection point)为每日确诊人数 - 每日治愈人数
-- 定义大拐点(obvious inflection point)为每日确诊人数 - 每日治愈人数 - 每日死亡人数
+- 小拐点(tiny inflection point): 每日确诊人数 - 每日治愈人数
+- 大拐点(obvious inflection point): 每日确诊人数 - 每日治愈人数 - 每日死亡人数
 
 - 疫情的四个时期：
-  1. 前疫情期  当前拐点 ≈ 0，拐点平缓
-  2. 疫情爆发期  当前拐点 > 0，拐点上升
-  3. 全民抗疫期  当前拐点 > 0，拐点下降
-  4. 后疫情期  当前拐点 < 0，拐点上升或平缓
+  1. 前疫情期(pre epidemic period)  当前拐点 ≈ 0，拐点平缓
+  2. 疫情爆发期(the outbreak period)  当前拐点 > 0，拐点上升
+  3. 全民抗疫期(the resistance period) 当前拐点 > 0，拐点下降
+  4. 后疫情期(post epidemic period)  当前拐点 < 0，拐点上升或平缓
