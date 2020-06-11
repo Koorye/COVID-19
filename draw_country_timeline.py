@@ -7,6 +7,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
+
+def get_fitting_poly(x_data, y_data, level):
+    array = np.polyfit(x_data, y_data, level)
+    poly = np.poly1d(array)
+    return poly
+
+
 if __name__ == '__main__':
     country_list = ['Italy', 'US']
     MAX_LAST_DAYS = 100
@@ -29,6 +36,9 @@ if __name__ == '__main__':
         tiny_differ_list = tiny_differ_data.loc[country].to_list()
         obvious_differ_list = obvious_differ_data.loc[country].to_list()
 
+        poly = get_fitting_poly(range(len(tiny_differ_list)), tiny_differ_list, 12)
+        fitting_list = poly(range(len(tiny_differ_list)))
+
         for last_index in range(DAYS_STEP, MAX_LAST_DAYS + DAYS_STEP, DAYS_STEP):
             plt.figure(figsize=(10, 6))
             plt.bar(range(len(confirmed_increased_list[-last_index:])), confirmed_increased_list[-last_index:],
@@ -40,8 +50,9 @@ if __name__ == '__main__':
                     0 - np.array(deaths_increased_list[-last_index:]),
                     color='red', label='Deaths Daily')
 
-            plt.plot(tiny_differ_list[-last_index:], color='dodgerblue', linewidth='2.5', label='Tiny Differ')
-            plt.plot(obvious_differ_list[-last_index:], color='coral', linewidth='2.5', label='Obvious Differ')
+            plt.plot(tiny_differ_list[-last_index:], color='dodgerblue', linewidth='1.5', label='Tiny Differ')
+            plt.plot(obvious_differ_list[-last_index:], color='coral', linewidth='1.5', label='Obvious Differ')
+            plt.plot(fitting_list[-last_index:], color='deeppink', linewidth='3', label='Fitting Differ')
 
             plt.legend(loc='best')
             plt.title('{} Timeline Recent {} Days'.format(country, last_index))
