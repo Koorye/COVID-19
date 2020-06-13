@@ -6,12 +6,13 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import datetime
 
 
-def get_fitting_poly(x_data, y_data, level):
-    array = np.polyfit(x_data, y_data, level)
-    poly = np.poly1d(array)
-    return poly
+def get_fitting_poly(poly_x_data, poly_y_data, level):
+    array = np.polyfit(poly_x_data, poly_y_data, level)
+    fitting_poly = np.poly1d(array)
+    return fitting_poly
 
 
 if __name__ == '__main__':
@@ -37,6 +38,31 @@ if __name__ == '__main__':
         obvious_differ_list = obvious_differ_data.loc[country].to_list()
 
         poly = get_fitting_poly(range(len(tiny_differ_list)), tiny_differ_list, 12)
+        diff_poly = np.polyder(poly)
+        diff2_poly = np.polyder(diff_poly)
+        date_data = []
+        date = datetime.datetime.strptime('2020-1-24', '%Y-%m-%d')
+        for i in range(130):
+            date_data.append(date)
+            date = date + datetime.timedelta(days=1)
+
+        x_data = np.array(range(130))
+        y0_data = poly(x_data)
+        y1_data = diff_poly(x_data)
+        y2_data = diff2_poly(x_data)
+        break_point_list = np.array([114, 89, 44, 35, 23])
+        second_diff_break_point_list = diff2_poly(break_point_list)
+
+        plt.figure(figsize=(10, 6))
+        # plt.plot(x_data, y0_data, label='primitive')
+        plt.plot(x_data, y1_data, label='first derivative')
+        plt.plot(date_data, y2_data, label='second derivative')
+        plt.xlabel('X')
+        plt.ylabel('Y')
+        plt.xticks(rotation=30)
+        plt.legend()
+        plt.savefig('img/poly_of_{}.png'.format(country))
+
         fitting_list = poly(range(len(tiny_differ_list)))
 
         for last_index in range(DAYS_STEP, MAX_LAST_DAYS + DAYS_STEP, DAYS_STEP):
